@@ -108,4 +108,8 @@ abstract class CIMAbstractRequest extends AIMAbstractRequest
 
         return $this->response = new CIMResponse($this, $httpResponse->getBody()->getContents());
     }
+
+    public function setIncludeIssuerInfo($value) {
+        return $this->setParameter('includeIssuerInfo', $value);
+    }
 }
